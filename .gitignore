@@ -1,0 +1,7 @@
+out
+node_modules
+vsc-extension-quickstart.md
+.vscode/**
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
