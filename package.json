@@ -1,7 +1,7 @@
 {
   "name": "ng-utilities",
-  "displayName": "ng-utilities",
-  "description": "angular utilities from makeflow",
+  "displayName": "Angular Utilities",
+  "description": "Angular utilities from makeflow",
   "version": "0.0.1",
   "publisher": "mf",
   "engines": {
