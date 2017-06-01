@@ -2,7 +2,7 @@
   "name": "ng-utils",
   "displayName": "Angular Utilities",
   "description": "Angular utilities vscode extension from makeflow",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "mf",
   "engines": {
     "vscode": "^1.12.0"
@@ -26,7 +26,7 @@
       },
       {
         "command": "ngUtils.renameAllTheSameNameFiles",
-        "title": "NgUtils: Rename All the Same Name Files in then Context"
+        "title": "NgUtils: Rename All the Same Name Files in the Context"
       }
     ],
     "menus": {
