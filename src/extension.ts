@@ -21,7 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
     histories[document.fileName] = ++uid;
   });
 
-  let disposable = vscode.commands.registerCommand('extension.switchSameNameFile', async () => {
+  let disposable = vscode.commands.registerCommand('ngUtils.switchFilesWithSameName', async () => {
     let activeTextEditor = vscode.window.activeTextEditor;
 
     if (!activeTextEditor) {
@@ -47,7 +47,7 @@ export function activate(context: vscode.ExtensionContext) {
       });
 
     let selectItem = await vscode.window.showQuickPick(selectItemsPromise, {
-      placeHolder: 'hello,world',
+      placeHolder: 'Select a file',
     });
 
     if (!selectItem) {
@@ -56,7 +56,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     let nextDocument = await vscode.workspace.openTextDocument(selectItem.file.absolutePath);
 
-    vscode.window.showTextDocument(nextDocument);
+    vscode.window.showTextDocument(nextDocument, activeTextEditor.viewColumn);
   });
 
   context.subscriptions.push(disposable);
