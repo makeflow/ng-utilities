@@ -2,7 +2,7 @@
   "name": "ng-utils",
   "displayName": "Angular Utilities",
   "description": "Angular utilities vscode extension from makeflow",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "mf",
   "engines": {
     "vscode": "^1.12.0"
@@ -17,8 +17,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "ngUtils.switchFilesWithSameName",
-        "title": "Switch Files with Same Name"
+        "command": "ngUtils.openFileWithTheSameName",
+        "title": "ngUtils: Open File with the Same Name"
+      },
+      {
+        "command": "ngUtils.openFileWithTheSameNameToTheSide",
+        "title": "NgUtils: Open File with the Same Name to the Side"
       }
     ]
   },
