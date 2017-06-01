@@ -34,6 +34,27 @@ export function activate(context: vscode.ExtensionContext) {
     });
 
   context.subscriptions.push(openToTheSideCommandDisposable);
+
+  let renameAllTheSameNameFilesDisposable = vscode.commands
+    .registerCommand('ngUtils.renameAllTheSameNameFiles', async (target: any) => {
+      if (!target || !target.path) {
+        return;
+      }
+
+      let filename = target.path;
+
+      let newName = await vscode.window.showInputBox({
+        placeHolder: 'Input new name',
+      });
+
+      if (!newName) {
+        return;
+      }
+
+      await SourceFileManager.rename(filename, newName);
+    });
+
+  context.subscriptions.push(renameAllTheSameNameFilesDisposable);
 }
 
 export function deactivate() {
