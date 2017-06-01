@@ -1,7 +1,7 @@
 {
   "name": "ng-utilities",
   "displayName": "Angular Utilities",
-  "description": "Angular utilities from makeflow",
+  "description": "Angular utilities vscode extension from makeflow",
   "version": "0.0.1",
   "publisher": "mf",
   "engines": {
