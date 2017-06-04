@@ -35,8 +35,8 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(openToTheSideCommandDisposable);
 
-  let renameAllTheSameNameFilesDisposable = vscode.commands
-    .registerCommand('ngUtils.renameAllTheSameNameFiles', async (target: any) => {
+  let renameRelatedFilesDisposable = vscode.commands
+    .registerCommand('ngUtils.renameRelatedFiles', async (target: any) => {
       if (!target || !target.path) {
         return;
       }
@@ -54,7 +54,7 @@ export function activate(context: vscode.ExtensionContext) {
       await SourceFileManager.rename(filename, newName);
     });
 
-  context.subscriptions.push(renameAllTheSameNameFilesDisposable);
+  context.subscriptions.push(renameRelatedFilesDisposable);
 }
 
 export function deactivate() {

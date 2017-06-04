@@ -2,7 +2,7 @@
   "name": "ng-utils",
   "displayName": "Angular Utilities",
   "description": "Angular utilities vscode extension from makeflow",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "mf",
   "engines": {
     "vscode": "^1.12.0"
@@ -25,14 +25,14 @@
         "title": "NgUtils: Open File with the Same Name to the Side"
       },
       {
-        "command": "ngUtils.renameAllTheSameNameFiles",
-        "title": "NgUtils: Rename All the Same Name Files in the Context"
+        "command": "ngUtils.renameRelatedFiles",
+        "title": "NgUtils: Rename Related Files"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "ngUtils.renameAllTheSameNameFiles",
+          "command": "ngUtils.renameRelatedFiles",
           "group": "ngUtils"
         }
       ]
