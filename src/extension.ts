@@ -37,11 +37,20 @@ export function activate(context: vscode.ExtensionContext) {
 
   let renameRelatedFilesDisposable = vscode.commands
     .registerCommand('ngUtils.renameRelatedFiles', async (target: any) => {
+      let filename: string;
       if (!target || !target.path) {
-        return;
-      }
+        let activeTextEditor = vscode.window.activeTextEditor;
 
-      let filename = target.path;
+        if (activeTextEditor) {
+          let activeDocument = activeTextEditor.document;
+          filename = activeDocument.fileName;
+        } else {
+          return;
+        }
+
+      } else {
+        filename = target.fsPath;
+      }
 
       let newName = await vscode.window.showInputBox({
         placeHolder: 'Input new name',
